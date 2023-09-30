@@ -1,11 +1,27 @@
 package com.remedios.guilherme.curso.Curso.remedio;
 
+import java.time.LocalDate;
+
+import jakarta.persistence.Enumerated;
+import jakarta.validation.constraints.Future;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+
 public record DadosCadastrosRemedio(
-		String nome, 
+		
+		@NotBlank
+		String nome,
+		@Enumerated
 		Via via, 
-		String lote, 
-		String quantidade, 
-		String validade, 
+		@NotBlank
+		String lote,
+		
+		
+		int quantidade, 
+		
+		@Future
+		LocalDate validade,
+		@Enumerated
 		Laboratorio laboratorio
 		) {
 

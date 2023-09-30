@@ -1,5 +1,7 @@
 package com.remedios.guilherme.curso.Curso.remedio;
 
+import java.time.LocalDate;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
@@ -46,11 +48,11 @@ public class Remedio {
 	
 	@Getter
 	@Setter
-	private String quantidade;
+	private int quantidade;
 	
 	@Getter
 	@Setter
-	private String  validade;
+	private LocalDate validade;
 	
 	@Enumerated(EnumType.STRING)
 	private Laboratorio laboratorio;

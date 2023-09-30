@@ -10,6 +10,8 @@ import com.remedios.guilherme.curso.Curso.remedio.DadosCadastrosRemedio;
 import com.remedios.guilherme.curso.Curso.remedio.Remedio;
 import com.remedios.guilherme.curso.Curso.remedio.RemedioRepository;
 
+import jakarta.validation.Valid;
+
 @RestController
 @RequestMapping("/remedios")
 public class RemedioController {
@@ -19,7 +21,7 @@ public class RemedioController {
 	private RemedioRepository repository;
 	
 	@PostMapping
-	public void cadastrar(@RequestBody DadosCadastrosRemedio dados){
+	public void cadastrar(@RequestBody @Valid DadosCadastrosRemedio dados){
 
 			repository.save(new Remedio(dados));
 		
