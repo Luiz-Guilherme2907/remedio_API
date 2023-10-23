@@ -52,14 +52,14 @@ public class RemedioController {
 		
 		
 	}
-	//@DeleteMapping ("/{id}")
-	//@Transactional
-	//public void deletarRemedio(@PathVariable Long id) {
-		//repository.deleteById(id);
+	@DeleteMapping ("/{id}")
+	@Transactional
+	public void deletarRemedio(@PathVariable Long id) {
+		repository.deleteById(id);
 		
 		
 		
-	//}
+	}
 	
 	
 }
